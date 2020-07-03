@@ -1,0 +1,23 @@
+#!/bin/bash
+
+remote="$1"
+url="$2"
+
+echo "pre-push code checking..."
+
+black . -l 80 -t py36
+
+if [ $? -ne 0 ]
+then
+    echo "❌  code check failed, git push denied!"
+    exit 1
+fi
+
+if [ -n "$(git status -s)" ]
+then
+  git add .
+  git commit --amend --no-edit
+fi
+
+exit 0
+
