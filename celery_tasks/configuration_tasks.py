@@ -34,7 +34,7 @@ def run_predict_model(self, predict_week):
     # 用跑预测的 celery task id 作为版本信息
     version = self.request.id
 
-    command = f"docker run --rm --network='host' harbor.ainnovation.com/whale/whale-cli:prod \
+    command = f"docker run --rm --network='host' {predict_docker}:prod \
         --redis_host={app_config.REDIS_HOST} \
         --redis_port={app_config.REDIS_PORT} \
         --redis_passwd={app_config.REDIS_PWD} \

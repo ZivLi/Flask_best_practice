@@ -1,19 +1,19 @@
 ## <u>代码提交流程</u> 
 
-1. 从 [远端代码库](https://gitlab.ainnovation.com/orion/fox)  Fork 一份到 auth（本人） 的 repo
+1. 从 [远端代码库](git@github.com:ZivLi/Flask_best_practice.git)  Fork 一份到 auth（本人） 的 repo
 
 2. 在本地 clone 代码并添加远端库
 
    ```shell
-   > git clone https://gitlab.ainnovation.com/<auth>/fox.git
-   > git remote add upstream https://gitlab.ainnovation.com/mli-algo/fox.git
+   > git clone git@github.com:<auth>/Flask_best_practice.git
+   > git remote add upstream git@github.com:ZivLi/Flask_best_practice.git
    	# 查看配置的远端库
    > git remote -v
    	# git 默认使用origin来标识你所克隆的原始仓库
-     origin	https://gitlab.ainnovation.com/<auth>/fox.git (fetch)
-     origin	https://gitlab.ainnovation.com/<auth>/fox.git (push)
-     upstream	https://gitlab.ainnovation.com/mli-algo/fox.git (fetch)
-     upstream	https://gitlab.ainnovation.com/mli-algo/fox.git (push)
+     origin	git@github.com:<auth>/Flask_best_practice.git(fetch)
+     origin	git@github.com:<auth>/Flask_best_practice.git(push)
+     upstream	git@github.com:ZivLi/Flask_best_practice.git (fetch)
+     upstream	git@github.com:ZivLi/Flask_best_practice.git (push)
    ```
 
 3. 新需求（card）开发之前必须首先 rebase upstream develop分支，然后 checkout 新的需求分支，以 Feature- 开头，简述 card 内容建立分支
@@ -107,35 +107,3 @@ MR 被 merge 之后，在本地执行 upgrade 操作
 ```
 
 执行完成后，检查对应数据库/表中，结构是否发生正确变化。
-
-## <u>wiki 接口文档提交流程</u>
-
-1. 在本地克隆wiki接口文档
-
-   ```shell
-   > git clone https://gitlab.ainnovation.com/mli-algo/fox.wiki.git
-   ```
-
-2. 进入Aiscm_apis目录下，修改相应的接口文档
-
-   ```shell
-   > cd [克隆文档路径]/fox.wiki/Aiscm_apis
-   ```
-
-3. 提交修改，每次push前，需拉取最新代码，再push到远端master分支上
-
-   ```shell
-   > git status
-   > git add <modified files>
-   > git commit -m "commit message"
-   > git pull origin master
-   # 如有冲突，需解决冲突后再push
-   > git push origin master
-   ```
-
-4. 如需新建接口文档，需要在Aiscm_apis目录下新增后缀.md的文件
-5. push成功后在[远端项目](https://gitlab.ainnovation.com/mli-algo/fox/wikis/Aiscm_apis/api_doc)查看wiki是否更新成功
-
-
-
- ---Authors: ZivLi, Wanghonggang, Sunhongxiang, Mumu
