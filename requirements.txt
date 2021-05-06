@@ -7,7 +7,7 @@ pandas==0.23.4
 xlrd==1.1.0
 redis==3.5.0
 flask_migrate==2.5.3
-flask_cors==3.0.8
+flask_cors==3.0.9
 flask_script==2.0.6
 flask-shell-ipython==0.3.1
 PyMySQL==0.9.3
