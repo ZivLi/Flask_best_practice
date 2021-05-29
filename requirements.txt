@@ -1,4 +1,4 @@
-flask==0.12.2
+flask==1.0
 flask-security==3.0.0
 flask-sqlalchemy==2.4.1
 flask_restful
