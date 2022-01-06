@@ -11,7 +11,7 @@ flask_cors==3.0.9
 flask_script==2.0.6
 flask-shell-ipython==0.3.1
 PyMySQL==0.9.3
-celery==4.4.2
+celery==5.2.2
 flask-marshmallow==0.12.0
 marshmallow-sqlalchemy==0.23.0
 numpy==1.18.3
