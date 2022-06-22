@@ -14,7 +14,7 @@ PyMySQL==0.9.3
 celery==4.4.2
 flask-marshmallow==0.12.0
 marshmallow-sqlalchemy==0.23.0
-numpy==1.18.3
+numpy==1.22.0
 scipy==1.4.1
 flower==0.9.4
 black==19.10b0
